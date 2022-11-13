@@ -11,10 +11,6 @@ body {
     background-color: rgb(41, 41, 41);
 }
 
-#root {
-    height: 100%;
-}
-
 .board-row {
     position: relative;
     display: flex;
@@ -68,7 +64,7 @@ body {
 }
   
 .game {
-    height: 100%;
+    height: 100vh;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -96,6 +92,8 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    max-height: 35vh;
+    overflow: scroll;
 }
 
 li {
@@ -130,4 +128,16 @@ li > button:hover {
 
 button:hover {
     cursor: pointer;
+}
+
+.footer {
+    position: absolute;
+    bottom: 2rem;
+    color: var(--font-color-white);
+    border: none;
+    transition: 0.25s color;
+}
+
+.footer:hover {
+    color: rgb(40, 129, 76);
 }

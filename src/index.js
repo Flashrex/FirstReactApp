@@ -104,7 +104,7 @@ class Game extends React.Component {
         if(move !== 0) {
             coords = getChangedSquareCoords(history[move-1], history[move]);
         }
-        
+
         const desc = move ?
             `Go to move #${move} (${coords !== undefined ? `${coords[0]}/${coords[1]}` : ""})` :
             `Go to game start`
@@ -145,6 +145,7 @@ class Game extends React.Component {
             <div className="game-status">{status}</div>
             <ul>{moves}</ul>
           </div>
+          <a className='footer' href="https://flashrex.github.io">Created by Flashrex</a>
         </div>
       );
     }
