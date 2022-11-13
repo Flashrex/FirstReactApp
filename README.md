@@ -1,4 +1,6 @@
-/assets/images/app_screenshot.png
+<p align="center">
+  <img src="/app_screenshot.png">
+</p>
 
 # My first React App
 
