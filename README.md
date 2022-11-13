@@ -1,4 +1,5 @@
-/assets/images/app_screenshot.png
+![Image of this app](/assets/images/app_screenshot.png)
+
 
 # My first React App
 
