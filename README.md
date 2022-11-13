@@ -1,5 +1,6 @@
-![Image of this app](/app_screenshot.png)
-
+<p align="center">
+  <img width="460" height="300" src="/app_screenshot.png">
+</p>
 
 # My first React App
 
