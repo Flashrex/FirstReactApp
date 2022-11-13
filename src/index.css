@@ -1,13 +1,133 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+    --square-size: 6rem;
+    --square-margin: 1rem;
+    --font-color-white: #cecccc;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+    margin: 0;
+    height: 100vh;
+    font: 14px "Century Gothic", Futura, sans-serif;
+    background-color: rgb(41, 41, 41);
+}
+
+#root {
+    height: 100%;
+}
+
+.board-row {
+    position: relative;
+    display: flex;
+}
+
+.divider-vertical {
+    position: absolute;
+    height: calc(var(--square-size) * 3 + var(--square-margin) * 6);
+    width: 1px;
+    background-color: rgb(196, 196, 196);
+}
+
+.divider-v-left {
+    top: 0;
+    left: calc(var(--square-size) + var(--square-margin) * 2);
+}
+
+.divider-v-right {
+    top: calc(-1 * (var(--square-size) + var(--square-margin) * 2));
+    left: calc(var(--square-size) * 2 + var(--square-margin) * 4);
+}
+
+.divider-horizontal {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 1px;
+    background-color: rgb(196, 196, 196);
+}
+  
+.square {
+    width: var(--square-size);
+    height: var(--square-size);
+    background: rgb(41, 41, 41);
+    border: none;
+    margin: var(--square-margin);
+    text-align: center;
+
+    font-size: 4.5rem;
+    font-weight: bold;
+    color: var(--font-color-white);
+}
+
+.square-winner {
+    color: rgb(40, 129, 76);
+}
+  
+.square:focus {
+    outline: none;
+}
+  
+.game {
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game-board {
+    margin-top: 4rem;
+}
+
+.game-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game-status {
+    color: var(--font-color-white);
+    font-size: 2rem;
+    font-weight: bolder;
+    margin: 0.5rem;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    width: 50vw;
+}
+
+@media (min-width: 40em) {
+    li {
+        width: 25vw;
+    }
+}
+
+li > button {
+    border: none;
+    width: 100%;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 2rem;
+    border-radius: 15px;
+    background-color: rgb(88, 88, 88);
+    color: var(--font-color-white);
+    font-weight: bold;
+    transition: 0.5s background-color;
+}
+
+li > button:hover {
+    background-color: rgb(66, 66, 66);
+}
+
+.highlighted {
+    background-color: rgb(66, 66, 66);
+}
+
+button:hover {
+    cursor: pointer;
 }
